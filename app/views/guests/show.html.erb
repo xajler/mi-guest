@@ -1,0 +1,35 @@
+<%- model_class = @guest.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
+  <dd><%= @guest.first_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+  <dd><%= @guest.last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:town) %>:</strong></dt>
+  <dd><%= @guest.town %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:country_id) %>:</strong></dt>
+  <dd><%= @guest.country_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
+  <dd><%= @guest.date_of_birth %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:nationality_id) %>:</strong></dt>
+  <dd><%= @guest.nationality_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:croatian_address) %>:</strong></dt>
+  <dd><%= @guest.croatian_address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:croatian_town) %>:</strong></dt>
+  <dd><%= @guest.croatian_town %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              guests_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_guest_path(@guest), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              guest_path(@guest),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

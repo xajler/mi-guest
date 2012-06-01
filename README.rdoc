@@ -1,0 +1,15 @@
+# Metaintellect Guest Application
+
+## Models
+* Accommodation
+* Guest
+* Nationality
+* Country
+* Document Type
+* Residence
+
+## Based on:
+* Ruby 1.9.3
+* Rails 3.2.3
+* Twitter Bootstrap
+* Simple Form

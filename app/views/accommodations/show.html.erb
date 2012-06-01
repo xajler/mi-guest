@@ -1,0 +1,29 @@
+<%- model_class = @accommodation.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:guest_id) %>:</strong></dt>
+  <dd><%= @accommodation.guest_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:document_type_id) %>:</strong></dt>
+  <dd><%= @accommodation.document_type_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:residence_id) %>:</strong></dt>
+  <dd><%= @accommodation.residence_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:entry_date) %>:</strong></dt>
+  <dd><%= @accommodation.entry_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:checkout_date) %>:</strong></dt>
+  <dd><%= @accommodation.checkout_date %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              accommodations_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_accommodation_path(@accommodation), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              accommodation_path(@accommodation),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

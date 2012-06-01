@@ -1,0 +1,12 @@
+<%= simple_form_for @accommodation, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :guest_id %>
+  <%= f.input :document_type_id %>
+  <%= f.input :residence_id %>
+  <%= f.input :entry_date %>
+  <%= f.input :checkout_date %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                accommodations_path, :class => 'btn' %>
+  </div>
+<% end %>
