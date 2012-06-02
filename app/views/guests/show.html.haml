@@ -1,0 +1,41 @@
+- model_class = @guest.class
+
+.page-header
+  %h1= t '.title', :default => model_class.model_name.human
+
+%dl.dl-horizontaL
+  %dt
+    %strong= model_class.human_attribute_name(:first_name) + ":"
+  %dd= @guest.first_name
+  %dt
+    %strong= model_class.human_attribute_name(:last_name) + ":"
+  %dd= @guest.last_name
+  %dt
+    %strong= model_class.human_attribute_name(:town) + ":"
+  %dd= @guest.town
+  %dt
+    %strong= model_class.human_attribute_name(:country_id) + ":"
+  %dd= @guest.country.name
+  %dt
+    %strong= model_class.human_attribute_name(:date_of_birth) + ":"
+  %dd= @guest.date_of_birth
+  %dt
+    %strong= model_class.human_attribute_name(:nationality_id) + ":"
+  %dd= @guest.nationality.name
+  %dt
+    %strong= model_class.human_attribute_name(:croatian_address) + ":"
+  %dd= @guest.croatian_address
+  %dt
+    %strong= model_class.human_attribute_name(:croatian_town) + ":"
+  %dd= @guest.croatian_town
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")),
+            guests_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")),
+            edit_guest_path(@guest), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")),
+            guest_path(@guest),
+            :method => 'delete',
+            :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+            :class => 'btn btn-danger'

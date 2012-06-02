@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120529234151) do
     t.integer  "guest_id"
     t.integer  "document_type_id"
     t.integer  "residence_id"
-    t.datetime "entry_date"
-    t.datetime "checkout_date"
+    t.date     "entry_date"
+    t.date     "checkout_date"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20120529234151) do
     t.string   "last_name"
     t.string   "town"
     t.integer  "country_id"
-    t.datetime "date_of_birth"
+    t.date     "date_of_birth"
     t.integer  "nationality_id"
     t.string   "croatian_address"
     t.string   "croatian_town"

@@ -4,8 +4,8 @@ class CreateAccommodations < ActiveRecord::Migration
       t.references :guest
       t.references :document_type
       t.references :residence
-      t.datetime :entry_date
-      t.datetime :checkout_date
+      t.date :entry_date
+      t.date :checkout_date
 
       t.timestamps
     end

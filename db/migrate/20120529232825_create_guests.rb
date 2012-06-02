@@ -5,7 +5,7 @@ class CreateGuests < ActiveRecord::Migration
       t.string :last_name
       t.string :town
       t.references :country
-      t.datetime :date_of_birth
+      t.date :date_of_birth
       t.references :nationality
       t.string :croatian_address
       t.string :croatian_town

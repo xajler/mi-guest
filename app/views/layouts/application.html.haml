@@ -1,0 +1,35 @@
+!!! 5
+%html
+%head
+  %title MiGuest::Villa Marta
+  /[if lt IE 9]
+    %script(src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript")
+
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+%body
+  %div(class="navbar navbar-fixed-top")
+    .navbar-inner
+      .container
+        %a(class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse")
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand(href="#") MiGuest Villa Marta
+        .nav-collapse
+          %ul.nav
+            %li= link_to "Accommodations", accommodations_path
+            %li= link_to "Guests", guests_path
+            %li= link_to "Nationalities", nationalities_path
+            %li= link_to "Countries", countries_path
+            %li= link_to "Residences", residences_path
+            %li= link_to "Document Types", document_types_path
+  .container
+    - flash.each do |name, msg|
+      - flash_type = name == :notice ? "success" : "error"
+      %div(class="alert alert-#{flash_type}")
+        %a(class="close" data-dismiss="alert") ×
+        = msg
+    = yield

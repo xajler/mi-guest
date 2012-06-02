@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
 */
+
+.small_select { width: 70px; }
+.large_select { width: 250px;  }
