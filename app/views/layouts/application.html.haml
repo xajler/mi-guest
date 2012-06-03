@@ -20,12 +20,39 @@
         %a.brand(href="#") MiGuest Villa Marta
         .nav-collapse
           %ul.nav
-            %li= link_to t('application.menu.accommodations'), accommodations_path
-            %li= link_to t('application.menu.guests'), guests_path
-            %li= link_to t('application.menu.nationalities'), nationalities_path
-            %li= link_to t('application.menu.countries'), countries_path
-            %li= link_to t('application.menu.residences'), residences_path
-            %li= link_to t('application.menu.document_types'), document_types_path
+            - if params[:controller] == 'accommodations'
+              %li.active= link_to t('application.menu.accommodations'), accommodations_path
+            - else
+              %li= link_to t('application.menu.accommodations'), accommodations_path
+
+            - if params[:controller] == 'guests'
+              %li.active= link_to t('application.menu.guests'), guests_path
+            - else
+              %li= link_to t('application.menu.guests'), guests_path
+
+            - if params[:controller] == 'nationalities'
+              %li.active= link_to t('application.menu.nationalities'), nationalities_path
+            - else
+              %li= link_to t('application.menu.nationalities'), nationalities_path
+
+            - if params[:controller] == 'countries'
+              %li.active= link_to t('application.menu.countries'), countries_path
+            - else
+              %li= link_to t('application.menu.countries'), countries_path
+
+            - if params[:controller] == 'residences'
+              %li.active= link_to t('application.menu.residences'), residences_path
+            - else
+              %li= link_to t('application.menu.residences'), residences_path
+
+            - if params[:controller] == 'document_types'
+              %li.active= link_to t('application.menu.document_types'), document_types_path
+            - else
+              %li= link_to t('application.menu.document_types'), document_types_path
+          %ul{ :class => "nav pull-right" }
+            - if current_user
+              %li= link_to  current_user.username, "#"
+              %li= link_to t('application.logout'), logout_path
   .container
     - flash.each do |name, msg|
       - flash_type = name == :notice ? "success" : "error"

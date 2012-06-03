@@ -4,9 +4,8 @@
   %h1=t '.title', :default => model_class.model_name.human.pluralize
 
 .filtering
+  = select_month(Date.today, {}, { :class => 'small_select' })
   = select_year(Date.today.year, { :start_year => 2011, :end_year => Date.today.year }, { :class => 'small_select' })
-  -# = select_month(Date.today.year, { :start_year => 2011, :end_year => Date.today.year }, { :class => 'small_select' })
-  -# = select_tag 'year', options_for_select(2011..Date.today.year, Date.today.year)
 
 = link_to t('.new', :default => t("helpers.links.new")),
           new_accommodation_path,

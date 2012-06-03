@@ -7,6 +7,13 @@ hr:
       countries: "Države"
       residences: "Prebivališta"
       document_types: "Tipovi dokumenata"
+    logout: "Odjava"
+
+  sessions:
+    new:
+      login: "Prijava"
+      username: "Korisničko ime"
+      password: "Zaporka"
 
   countries:
     index:

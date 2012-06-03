@@ -1,0 +1,20 @@
+!!! 5
+%html
+%head
+  %title MiGuest::Villa Marta::Login
+  = stylesheet_link_tag    "application", :media => "all"
+  = csrf_meta_tags
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+%body
+  %h1= t '.login'
+
+  = form_tag sessions_path do
+    .field
+      = label_tag :username, t('.username')
+      = text_field_tag :username, params[:username]
+
+    .field
+      = label_tag :password, t('.password')
+      = password_field_tag :password
+
+    .actions= submit_tag t('.login')

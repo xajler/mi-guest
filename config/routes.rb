@@ -1,6 +1,14 @@
 MiGuest::Application.routes.draw do
 
-  root :to => 'accomodations#index'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
+  root :to => 'sessions#new'
+
+  # Uncomment to create users via /users/new
+  # resources :users
+
+  resources :sessions
 
   resources :accommodations
 

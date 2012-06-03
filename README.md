@@ -13,6 +13,7 @@
 * Country
 * Document Type
 * Residence
+* User
 
 ## Based on:
 * Ruby 1.9.3
