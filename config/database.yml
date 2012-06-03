@@ -23,5 +23,5 @@ production:
   encoding: unicode
   database: logviewer
   pool: 5
-  username: logviewer
+  username: xajler
   password: Q1uk4
