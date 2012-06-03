@@ -5,7 +5,12 @@
 
 .filtering
   = select_year(Date.today.year, { :start_year => 2011, :end_year => Date.today.year }, { :class => 'small_select' })
+  -# = select_month(Date.today.year, { :start_year => 2011, :end_year => Date.today.year }, { :class => 'small_select' })
   -# = select_tag 'year', options_for_select(2011..Date.today.year, Date.today.year)
+
+= link_to t('.new', :default => t("helpers.links.new")),
+          new_accommodation_path,
+          :class => 'btn btn-primary'
 
 %table(class="table table-striped")
   %thead
@@ -36,7 +41,3 @@
                     :method => :delete,
                     :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                     :class => 'btn btn-mini btn-danger'
-
-= link_to t('.new', :default => t("helpers.links.new")),
-          new_accommodation_path,
-          :class => 'btn btn-primary'

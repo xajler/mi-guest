@@ -1,0 +1,69 @@
+hr:
+  application:
+    menu:
+      accommodations: "Smještaji"
+      guests: "Gosti"
+      nationalities: "Državljanstva"
+      countries: "Države"
+      residences: "Prebivališta"
+      document_types: "Tipovi dokumenata"
+
+  countries:
+    index:
+      title: "Države"
+    edit:
+      title: "Izmjeni državu"
+    new:
+      title: "Stvori državu"
+    show:
+      edit: "Izmjeni"
+
+  nationalities:
+    index:
+      title: "Državljanstva"
+    edit:
+      title: "Izmjeni državljanstvo"
+    new:
+      title: "Stvori državljanstvo"
+    show:
+      edit: "Izmjeni"
+
+  document_types:
+    index:
+      title: "Tipovi dokumenata"
+    edit:
+      title: "Izmjeni tip dokumenta"
+    new:
+      title: "Stvori tip dokumenta"
+    show:
+      edit: "Izmjeni"
+
+  residences:
+    index:
+      title: "Prebivališta"
+    edit:
+      title: "Izmjeni prebivalište"
+    new:
+      title: "Stvori prebivalište"
+    show:
+      edit: "Izmjeni"
+
+  guests:
+    index:
+      title: "Gosti"
+    edit:
+      title: "Izmjeni gosta"
+    new:
+      title: "Stvori gosta"
+    show:
+      edit: "Izmjeni"
+
+  accommodations:
+    index:
+      title: "Smještaji"
+    edit:
+      title: "Izmjeni smještaj"
+    new:
+      title: "Stvori smještaj"
+    show:
+      edit: "Izmjeni"

@@ -1,0 +1,60 @@
+hr:
+  activerecord:
+    models:
+      country:
+        one: "Država"
+        other: "Države"
+
+      nationality:
+        one: "Državljanstvo"
+        other: "Državljanstva"
+
+      document_type:
+        one: "Tip dokumenta"
+        other: "Tipovi dokumenata"
+
+      residences:
+        one: "Prebivalište"
+        other: "Prebivališta"
+
+      guest:
+        one: "Gost"
+        other: "Gosti"
+
+      accommodation:
+        one: "Smještaj"
+        other: "Smještaji"
+
+    attributes:
+      country:
+        name: "Naziv"
+
+      nationality:
+        name: "Naziv"
+
+      document_type:
+        name: "Naziv"
+
+      residence:
+        owner_name: "Ime vlasnika"
+        address: "Adresa"
+        town: "Mjesto"
+
+      guest:
+        first_name: "Ime"
+        last_name: "Prezime"
+        town: "Mjesto"
+        country_id: "Država"
+        nationality_id: "Državljanstvo"
+        date_of_birth: "Datum rođenja"
+        croatian_address: "Adresa boravište u HR"
+        croatian_town: "Grad boravišta u HR"
+        created_at: "Datum stvaranja"
+
+      accommodation:
+        guest_id: "Gost"
+        document_type_id: "Tip dokumenta"
+        residence_id: "Prebivalište"
+        entry_date: "Datum dolaska"
+        checkout_date: "Datum odlaska"
+        created_at: "Datum stvaranja"

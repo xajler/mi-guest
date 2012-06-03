@@ -1,0 +1,10 @@
+hr:
+  helpers:
+    links:
+      new: "Novi"
+      edit: "Izmjeni"
+      cancel: "Poništi"
+      destroy: "Obriši"
+      confirm: "Da li ste sigurni?"
+      back: "Nazad"
+    actions: "Akcije"
