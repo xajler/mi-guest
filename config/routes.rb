@@ -6,7 +6,7 @@ MiGuest::Application.routes.draw do
   root :to => 'sessions#new'
 
   # Uncomment to create users via /users/new
-  # resources :users
+  resources :users
 
   resources :sessions
 
