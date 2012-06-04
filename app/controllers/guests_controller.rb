@@ -20,7 +20,7 @@ class GuestsController < ApplicationController
     @guest = Guest.new(params[:guest])
 
     if @guest.save
-      redirect_to @guest, notice: 'Guest was successfully created.'
+      redirect_to @guest, notice: t(:guests_create_notice)
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class GuestsController < ApplicationController
     @guest = Guest.find(params[:id])
 
     if @guest.update_attributes(params[:guest])
-      redirect_to @guest, notice: 'Guest was successfully updated.'
+      redirect_to @guest, notice: t(:guests_update_notice)
     else
       render action: "edit"
     end

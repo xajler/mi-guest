@@ -1,5 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  countries_create_notice: 'Country was successfully created.'
+  nationalities_create_notice: 'Nationality was successfully created.'
+  document_types_create_notice: 'Document Type was successfully created.'
+  residences_create_notice: 'Residence was successfully created.'
+  guests_create_notice: 'Guest was successfully created.'
+  accommodations_create_notice: 'Accommodation was successfully created.'
+  countries_update_notice: 'Country was successfully updated.'
+  nationalities_update_notice: 'Nationality was successfully updated.'
+  document_types_update_notice: 'Document Type was successfully updated.'
+  residences_update_notice: 'Residence was successfully updated.'
+  guests_update_notice: 'Guest was successfully updated.'
+  accommodations_update_notice: 'Accommodation was successfully updated.'

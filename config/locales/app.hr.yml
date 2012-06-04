@@ -1,0 +1,13 @@
+hr:
+  countries_create_notice: 'Država je uspješno stvorena.'
+  nationalities_create_notice: 'Državljanstvo je uspješno stvoreno.'
+  document_types_create_notice: 'Tip dokumenta je uspješno stvoren.'
+  residences_create_notice: 'Prebivalište je uspješno stvoreno.'
+  guests_create_notice: 'Gost je uspješno stvoren.'
+  accommodations_create_notice: 'Smještaj je uspješno stvoren.'
+  countries_update_notice: 'Država je uspješno izmjenjena.'
+  nationalities_update_notice: 'Državljanstvo je uspješno izmjenjeno.'
+  document_types_update_notice: 'Tip dokumenta je uspješno izmjenjen.'
+  residences_update_notice: 'Prebivalište je uspješno izmjenjeno.'
+  guests_update_notice: 'Gost je uspješno izmjenjen.'
+  accommodations_update_notice: 'Smještaj je uspješno izmjenjen.'

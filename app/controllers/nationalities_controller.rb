@@ -20,7 +20,7 @@ class NationalitiesController < ApplicationController
     @nationality = Nationality.new(params[:nationality])
 
     if @nationality.save
-      redirect_to @nationality, notice: 'Nationality was successfully created.'
+      redirect_to @nationality, notice: t(:nationalities_create_notice)
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class NationalitiesController < ApplicationController
     @nationality = Nationality.find(params[:id])
 
     if @nationality.update_attributes(params[:nationality])
-      redirect_to @nationality, notice: 'Nationality was successfully updated.'
+      redirect_to @nationality, notice: t(:nationalities_update_notice)
     else
       render action: "edit"
     end

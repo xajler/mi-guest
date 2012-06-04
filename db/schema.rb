@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603161926) do
+ActiveRecord::Schema.define(:version => 20120604202759) do
 
   create_table "accommodations", :force => true do |t|
     t.integer  "guest_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20120603161926) do
     t.date     "checkout_date"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "document_number"
   end
 
   add_index "accommodations", ["document_type_id"], :name => "index_accommodations_on_document_type_id"

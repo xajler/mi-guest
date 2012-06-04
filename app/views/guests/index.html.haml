@@ -10,13 +10,12 @@
 %table(class="table table-striped")
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:first_name)
       %th= model_class.human_attribute_name(:last_name)
       %th= model_class.human_attribute_name(:town)
-      %th= model_class.human_attribute_name(:country_id)
+      %th= model_class.human_attribute_name(:country)
       %th= model_class.human_attribute_name(:date_of_birth)
-      %th= model_class.human_attribute_name(:nationality_id)
+      %th= model_class.human_attribute_name(:nationality)
       %th= model_class.human_attribute_name(:created_at)
       %th= model_class.human_attribute_name(:croatian_address)
       %th= model_class.human_attribute_name(:croatian_town)
@@ -24,7 +23,6 @@
   %tbody
     - @guests.each do |guest|
       %tr
-        %td= guest.id
         %td= link_to guest.first_name, guest_path(guest)
         %td= link_to guest.last_name, guest_path(guest)
         %td= guest.town

@@ -10,13 +10,11 @@
 %table(class="table table-striped")
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:name)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @countries.each do |country|
       %tr
-        %td= country.id
         %td= link_to country.name, country_path(country)
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),

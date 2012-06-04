@@ -10,7 +10,6 @@
 %table(class="table table-striped")
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:owner_name)
       %th= model_class.human_attribute_name(:address)
       %th= model_class.human_attribute_name(:town)
@@ -18,7 +17,6 @@
 
     - @residences.each do |residence|
       %tr
-        %td= residence.id
         %td= link_to residence.owner_name, residence_path(residence)
         %td= residence.address
         %td= residence.town

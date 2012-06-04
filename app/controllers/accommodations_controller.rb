@@ -20,7 +20,7 @@ class AccommodationsController < ApplicationController
     @accommodation = Accommodation.new(params[:accommodation])
 
     if @accommodation.save
-      redirect_to @accommodation, notice: 'Accommodation was successfully created.'
+      redirect_to @accommodation, notice: t(:accommodations_create_notice)
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class AccommodationsController < ApplicationController
     @accommodation = Accommodation.find(params[:id])
 
     if @accommodation.update_attributes(params[:accommodation])
-      redirect_to @accommodation, notice: 'Accommodation was successfully updated.'
+      redirect_to @accommodation, notice: t(:accommodations_update_notice)
     else
       render action: "edit"
     end

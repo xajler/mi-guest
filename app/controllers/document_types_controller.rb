@@ -20,7 +20,7 @@ class DocumentTypesController < ApplicationController
     @document_type = DocumentType.new(params[:document_type])
 
     if @document_type.save
-      redirect_to @document_type, notice: 'Document type was successfully created.'
+      redirect_to @document_type, notice: t(:document_types_create_notice)
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class DocumentTypesController < ApplicationController
     @document_type = DocumentType.find(params[:id])
 
     if @document_type.update_attributes(params[:document_type])
-      redirect_to @document_type, notice: 'Document type was successfully updated.'
+      redirect_to @document_type, notice: t(:document_types_update_notice)
     else
       render action: "edit"
     end

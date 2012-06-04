@@ -4,13 +4,16 @@
 
 %dl.dl-horizontal
   %dt
-    %strong= model_class.human_attribute_name(:guest_id) + ":"
+    %strong= model_class.human_attribute_name(:guest) + ":"
   %dd= @accommodation.guest.to_label
   %dt
-    %strong= model_class.human_attribute_name(:document_type_id) + ":"
+    %strong= model_class.human_attribute_name(:document_type) + ":"
   %dd= @accommodation.document_type.name
   %dt
-    %strong= model_class.human_attribute_name(:residence_id) + ":"
+    %strong= model_class.human_attribute_name(:document_number) + ":"
+  %dd= @accommodation.document_number
+  %dt
+    %strong= model_class.human_attribute_name(:residence) + ":"
   %dd= @accommodation.residence.to_label
   %dt
     %strong= model_class.human_attribute_name(:entry_date) + ":"

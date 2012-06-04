@@ -10,13 +10,11 @@
 %table{ :class => "table table-striped" }
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:name)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @document_types.each do |document_type|
       %tr
-        %td= document_type.id
         %td= link_to document_type.name, document_type_path(document_type)
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),

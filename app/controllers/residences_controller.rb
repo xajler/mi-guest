@@ -20,7 +20,7 @@ class ResidencesController < ApplicationController
     @residence = Residence.new(params[:residence])
 
     if @residence.save
-      redirect_to @residence, notice: 'Residence was successfully created.'
+      redirect_to @residence, notice: t(:residences_create_notice)
     else
       render action: "new"
     end
@@ -30,7 +30,7 @@ class ResidencesController < ApplicationController
     @residence = Residence.find(params[:id])
 
     if @residence.update_attributes(params[:residence])
-      redirect_to @residence, notice: 'Residence was successfully updated.'
+      redirect_to @residence, notice: t(:residences_update_notice)
     else
       render action: "edit"
     end

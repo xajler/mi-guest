@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+Residence.create(:owner_name => "Zef", :address => "Nova Cesta 152/1", :town => "Opatija")
 Residence.create(:owner_name => "Jeton", :address => "Nova Cesta 152/1", :town => "Opatija")
 
 DocumentType.create(:name => "Putovnica")
