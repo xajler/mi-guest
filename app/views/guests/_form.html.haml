@@ -2,10 +2,19 @@
   = f.input :first_name
   = f.input :last_name
   = f.input :town
-  = f.association :country, :include_blank => false, :input_html => { :class => 'large_select' }
-  = f.input :date_of_birth, :as => :date, :start_year => Date.today.year - 90,
-                           :end_year => Date.today.year, :order => [:day, :month, :year]
-  = f.association :nationality, :include_blank => false, :input_html => { :class => 'large_select' }
+  = f.input :country_name, :url => autocomplete_country_name_guests_path,
+                           :as => :autocomplete,
+                           :input_html => { :id_element => "#guest_country_id" }
+  = f.input :country_id, :as => :hidden
+  = f.input :date_of_birth, :as => :date,
+                            :start_year => Date.today.year - 90,
+                            :end_year => Date.today.year,
+                            :order => [:day, :month, :year]
+  -# = f.association :nationality, :include_blank => false, :input_html => { :class => 'large_select' }
+  = f.input :nationality_name, :url => autocomplete_nationality_name_guests_path,
+                               :as => :autocomplete,
+                               :input_html => { :id_element => "#guest_nationality_id" }
+  = f.input :nationality_id, :as => :hidden
   = f.input :croatian_address
   = f.input :croatian_town
 

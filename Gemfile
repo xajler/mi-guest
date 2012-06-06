@@ -21,6 +21,8 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 end
 
+#gem 'rails3-jquery-autocomplete'
+gem 'rails3-jquery-autocomplete', :git => 'git://github.com/crowdint/rails3-jquery-autocomplete.git'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'haml'

@@ -44,15 +44,15 @@ hr:
         first_name: "Ime"
         last_name: "Prezime"
         town: "Mjesto"
-        country: "Država"
-        nationality: "Državljanstvo"
+        country_name: "Država"
+        nationality_name: "Državljanstvo"
         date_of_birth: "Datum rođenja"
         croatian_address: "Adresa boravište u HR"
         croatian_town: "Grad boravišta u HR"
         created_at: "Datum stvaranja"
 
       accommodation:
-        guest: "Gost"
+        guest_last_name: "Gost"
         document_type: "Tip dokumenta"
         document_number: "Broj dokumenta"
         residence: "Prebivalište"

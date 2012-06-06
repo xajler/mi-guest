@@ -1,5 +1,7 @@
 class AccommodationsController < ApplicationController
 
+  autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
+
   def index
     @accommodations = Accommodation.by_created_at_desc
   end

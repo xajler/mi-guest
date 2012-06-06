@@ -3,6 +3,17 @@ MiGuest::Application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
+  resources :accommodations do
+    get :autocomplete_guest_last_name, :on => :collection
+  end
+
+  resources :guests do
+    collection do
+      get :autocomplete_country_name
+      get :autocomplete_nationality_name
+    end
+  end
+
   root :to => 'sessions#new'
 
   # Uncomment to create users via /users/new
@@ -23,6 +34,8 @@ MiGuest::Application.routes.draw do
   resources :document_types
 
   resources :countries
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

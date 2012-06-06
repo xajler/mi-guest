@@ -1,11 +1,20 @@
 = simple_form_for @accommodation, :html => { :class => 'form-horizontal' } do |f|
-  = f.association :guest, :include_blank => false, :input_html => { :class => 'large_select' }
-  = f.association :document_type, :as => :radio_buttons, :checked => 1
+  = f.input :guest_last_name, :url => autocomplete_guest_last_name_accommodations_path,
+                              :as => :autocomplete,
+                              :input_html => { :id_element => "#accommodation_guest_id" }
+  = f.input :guest_id, :as => :hidden
+  = f.association :document_type, :as => :radio_buttons,
+                                  :checked => 1
   = f.input :document_number
-  = f.association :residence, :include_blank => false, :input_html => { :class => 'large_select' }
-  = f.input :entry_date, :as => :date, :start_year => 2011, :end_year => Date.today.year + 1,
+  = f.association :residence, :include_blank => false,
+                              :input_html => { :class => 'large_select' }
+  = f.input :entry_date, :as => :date,
+                         :start_year => 2011,
+                         :end_year => Date.today.year + 1,
                          :order => [:day, :month, :year]
-  = f.input :checkout_date, :as => :date, :start_year => 2011, :end_year => Date.today.year + 1,
+  = f.input :checkout_date, :as => :date,
+                            :start_year => 2011,
+                            :end_year => Date.today.year + 1,
                             :order => [:day, :month, :year]
 
   .form-actions

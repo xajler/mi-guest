@@ -1,5 +1,8 @@
 class GuestsController < ApplicationController
 
+  autocomplete :country, :name, :full => true
+  autocomplete :nationality, :name, :full => true
+
   def index
     @guests = Guest.all
   end

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/crowdint/rails3-jquery-autocomplete.git
+  revision: abc6e3aa8f2cc704d79b2257af45e0cd95e66c9f
+  specs:
+    rails3-jquery-autocomplete (1.0.7)
+      rails (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -150,6 +157,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.3)
+  rails3-jquery-autocomplete!
   sass-rails (~> 3.2.3)
   simple_form
   sqlite3
