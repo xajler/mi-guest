@@ -17,12 +17,12 @@
 
     - @residences.each do |residence|
       %tr
-        %td= link_to residence.owner_name, residence_path(residence)
+        %td= link_to residence.owner_name, edit_residence_path(residence)
         %td= residence.address
         %td= residence.town
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
-                    edit_residence_path(residence), :class => 'btn btn-mini'
+                    edit_residence_path(residence), :class => 'btn btn-mini btn-info'
           = link_to t('.destroy', :default => t("helpers.links.destroy")),
                     residence_path(residence),
                     :method => :delete,

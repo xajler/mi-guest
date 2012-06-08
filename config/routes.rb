@@ -5,6 +5,7 @@ MiGuest::Application.routes.draw do
 
   resources :accommodations do
     get :autocomplete_guest_last_name, :on => :collection
+    get 'print'
   end
 
   resources :guests do

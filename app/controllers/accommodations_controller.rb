@@ -6,8 +6,8 @@ class AccommodationsController < ApplicationController
     @accommodations = Accommodation.by_created_at_desc
   end
 
-  def show
-    @accommodation = Accommodation.find(params[:id])
+  def print
+    @accommodation = Accommodation.find(params[:accommodation_id])
   end
 
   def new
@@ -16,6 +16,7 @@ class AccommodationsController < ApplicationController
 
   def edit
     @accommodation = Accommodation.find(params[:id])
+    @guest_name = @accommodation.guest.to_autocomplete
   end
 
   def create

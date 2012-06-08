@@ -15,10 +15,10 @@
   %tbody
     - @document_types.each do |document_type|
       %tr
-        %td= link_to document_type.name, document_type_path(document_type)
+        %td= link_to document_type.name, edit_document_type_path(document_type)
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
-                    edit_document_type_path(document_type), :class => 'btn btn-mini'
+                    edit_document_type_path(document_type), :class => 'btn btn-mini btn-info'
           = link_to t('.destroy', :default => t("helpers.links.destroy")),
                     document_type_path(document_type),
                     :method => :delete,

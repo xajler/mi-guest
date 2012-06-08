@@ -68,6 +68,7 @@ hr:
   accommodations:
     index:
       title: "Smještaji"
+      print: "Isprintaj"
     edit:
       title: "Izmjeni smještaj"
     new:

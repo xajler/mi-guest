@@ -17,6 +17,8 @@ class GuestsController < ApplicationController
 
   def edit
     @guest = Guest.find(params[:id])
+    @country_name = @guest.country.name
+    @nationality_name = @guest.nationality.name
   end
 
   def create

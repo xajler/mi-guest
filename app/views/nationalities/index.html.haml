@@ -15,10 +15,11 @@
   %tbody
     - @nationalities.each do |nationality|
       %tr
-        %td= link_to nationality.name, nationality_path(nationality)
+        %td= link_to nationality.name, edit_nationality_path(nationality)
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
-                    edit_nationality_path(nationality), :class => 'btn btn-mini'
+                    edit_nationality_path(nationality),
+                    :class => 'btn btn-mini btn-info'
           = link_to t('.destroy', :default => t("helpers.links.destroy")),
                     nationality_path(nationality),
                     :method => :delete,

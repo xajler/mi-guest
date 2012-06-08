@@ -4,12 +4,12 @@ class Guest < ActiveRecord::Base
 
   attr_accessor :country_name, :nationality_name
   attr_accessible :croatian_address, :croatian_town, :date_of_birth, :first_name, :last_name, :town,
-                  :country_name, :nationality_name, :country_id, :nationality_id
+                  :country_name, :nationality_name, :country_id, :nationality_id, :full_name
 
   validates_presence_of :first_name, :last_name, :town, :country_id, :nationality_id
 
-  def to_label
-    "#{first_name} #{last_name}"
+  def full_name
+    "#{last_name} #{first_name}"
   end
 
   def to_autocomplete

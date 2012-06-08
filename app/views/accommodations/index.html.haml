@@ -14,7 +14,7 @@
 %table(class="table table-striped")
   %thead
     %tr
-      %th= model_class.human_attribute_name(:guest)
+      %th= model_class.human_attribute_name(:guest_last_name)
       %th= model_class.human_attribute_name(:document_type)
       %th= model_class.human_attribute_name(:document_number)
       %th= model_class.human_attribute_name(:residence)
@@ -25,7 +25,7 @@
   %tbody
     - @accommodations.each do |accommodation|
       %tr
-        %td= link_to accommodation.guest.to_label, accommodation_path(accommodation)
+        %td= link_to accommodation.guest.full_name, edit_accommodation_path(accommodation)
         %td= accommodation.document_type.name
         %td= accommodation.document_number
         %td= accommodation.residence.to_label
@@ -33,8 +33,12 @@
         %td= accommodation.checkout_date.to_s
         %td= accommodation.created_at.to_s
         %td
+          = link_to t('helpers.links.print'),
+                    accommodation_print_path(accommodation),
+                    :class => 'btn btn-mini btn-primary'
           = link_to t('.edit', :default => t("helpers.links.edit")),
-                    edit_accommodation_path(accommodation), :class => 'btn btn-mini'
+                    edit_accommodation_path(accommodation),
+                    :class => 'btn btn-mini btn-info'
           = link_to t('.destroy', :default => t("helpers.links.destroy")),
                     accommodation_path(accommodation),
                     :method => :delete,

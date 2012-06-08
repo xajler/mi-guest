@@ -1,0 +1,17 @@
+@media print {
+body { padding-top: 0 !important; background-color: #fff !important;  }
+.navbar, .navbar-fixed-top { display: none !important; }
+}
+#col-1 { margin-top: 65pt; }
+#col-2, #col-3, #col-4, #col-5, #col-7, #col-9, #col-10, #col-11, #col-12,
+#col-13, #col-14, #col-15 {  }
+#col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-9, #col-10,
+#col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 250pt; line-height: 21pt; border: 1px solid #f00; }
+#col-6 { margin-top: 62pt; }
+#col-8 { margin-left: 20pt; margin-right: 20pt; overflow: hidden; width: 85%; }
+#col-8 .accommodation_entry_date { float: left; }
+#col-8 .accommodation_checkout_date { float: right; }
+.clear { clear: both  }
+
+#col-1, #col-2, #col-3, #col-4, #col-6, #col-9, #col-10, #col-11, #col-12,
+#col-13, #col-14 { border-bottom: 0; }

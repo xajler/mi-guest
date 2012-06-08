@@ -3,8 +3,9 @@ hr:
     links:
       new: "Novi"
       edit: "Izmjeni"
-      cancel: "Poništi"
+      cancel: "Odustni"
       destroy: "Obriši"
       confirm: "Da li ste sigurni?"
       back: "Nazad"
+      print: "Isprintaj"
     actions: "Akcije"

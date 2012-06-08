@@ -50,12 +50,13 @@ hr:
         croatian_address: "Adresa boravište u HR"
         croatian_town: "Grad boravišta u HR"
         created_at: "Datum stvaranja"
+        full_name: "Prezime i ime"
 
       accommodation:
-        guest_last_name: "Gost"
+        guest_last_name: "Prezime i ime"
         document_type: "Tip dokumenta"
         document_number: "Broj dokumenta"
         residence: "Prebivalište"
         entry_date: "Datum dolaska"
         checkout_date: "Datum odlaska"
-        created_at: "Datum stvaranja"
+        created_at: "Datum stvaranja"       
