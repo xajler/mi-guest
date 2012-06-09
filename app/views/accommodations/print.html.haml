@@ -3,7 +3,7 @@
   = link_to t('.cancel', :default => t("helpers.links.cancel")),
             accommodations_path, :class => 'btn'
 
-#print            
+#print
   #col-1= @accommodation.guest.last_name
   #col-2= @accommodation.guest.first_name
   #col-3
@@ -15,9 +15,10 @@
     %span.document_type= @accommodation.document_type.name
     %span.document_number= @accommodation.document_number
   #col-6
-    %span.residence_owner_name= @accommodation.residence.owner_name
     %span.residence_address= @accommodation.residence.address
     %span.residence_town= @accommodation.residence.town
+    %span &nbsp;&nbsp;&nbsp;
+    %span.residence_owner_name= @accommodation.residence.owner_name
   #col-7
     %span.guest_croatian_address= @accommodation.guest.croatian_address
     %span.guest_croatian_town= @accommodation.guest.croatian_town
