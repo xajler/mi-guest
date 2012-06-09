@@ -41,8 +41,9 @@
     %span.document_type= @accommodation.document_type.name
     %span.document_number= @accommodation.document_number
   #col-13
-    %span.residence_owner_name= @accommodation.residence.owner_name
     %span.residence_address= @accommodation.residence.address
     %span.residence_town= @accommodation.residence.town
+    %span &nbsp;&nbsp;&nbsp;
+    %span.residence_owner_name= @accommodation.residence.owner_name
   #col-14= accommodation_entry_date= @accommodation.entry_date
   #col-15= @accommodation.checkout_date
