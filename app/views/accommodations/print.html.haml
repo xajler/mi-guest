@@ -1,43 +1,47 @@
-#col-1= @accommodation.guest.last_name
-#col-2= @accommodation.guest.first_name
-#col-3
-  %span.town= @accommodation.guest.town
-  %span.country= @accommodation.guest.country.name
-  %span.date_of_birth= @accommodation.guest.date_of_birth
-#col-4= @accommodation.guest.nationality.name
-#col-5
-  %span.document_type= @accommodation.document_type.name
-  %span.document_number= @accommodation.document_number
-#col-6
-  %span.residence_owner_name= @accommodation.residence.owner_name
-  %span.residence_address= @accommodation.residence.address
-  %span.residence_town= @accommodation.residence.town
-#col-7
-  %span.guest_croatian_address= @accommodation.guest.croatian_address
-  %span.guest_croatian_town= @accommodation.guest.croatian_town
-#col-8
-  .accommodation_entry_date= @accommodation.entry_date
-  .accommodation_checkout_date= @accommodation.checkout_date
+#buttons
+  %button{ :class => 'btn btn-warning', :onclick => 'window.print();' }= t('.print_accommodation')
+  = link_to t('.cancel', :default => t("helpers.links.cancel")),
+            accommodations_path, :class => 'btn'
 
-.clear
-.space-1
+#print            
+  #col-1= @accommodation.guest.last_name
+  #col-2= @accommodation.guest.first_name
+  #col-3
+    %span.town= @accommodation.guest.town
+    %span.country= @accommodation.guest.country.name
+    %span.date_of_birth= @accommodation.guest.date_of_birth
+  #col-4= @accommodation.guest.nationality.name
+  #col-5
+    %span.document_type= @accommodation.document_type.name
+    %span.document_number= @accommodation.document_number
+  #col-6
+    %span.residence_owner_name= @accommodation.residence.owner_name
+    %span.residence_address= @accommodation.residence.address
+    %span.residence_town= @accommodation.residence.town
+  #col-7
+    %span.guest_croatian_address= @accommodation.guest.croatian_address
+    %span.guest_croatian_town= @accommodation.guest.croatian_town
+    %span &nbsp;
+  #col-8
+    .accommodation_entry_date= @accommodation.entry_date
+    .accommodation_checkout_date= @accommodation.checkout_date
 
--# --------------------------------------------
+  .clear
 
-.space-2
+  -# --------------------------------------------
 
-#col-9= @accommodation.guest.last_name
-#col-10= @accommodation.guest.first_name
-#col-11
-  %span.town= @accommodation.guest.town
-  %span.country= @accommodation.guest.country.name
-  %span.date_of_birth= @accommodation.guest.date_of_birth
-#col-12
-  %span.document_type= @accommodation.document_type.name
-  %span.document_number= @accommodation.document_number
-#col-13
-  %span.residence_owner_name= @accommodation.residence.owner_name
-  %span.residence_address= @accommodation.residence.address
-  %span.residence_town= @accommodation.residence.town
-#col-14= accommodation_entry_date= @accommodation.entry_date
-#col-15= @accommodation.checkout_date
+  #col-9= @accommodation.guest.last_name
+  #col-10= @accommodation.guest.first_name
+  #col-11
+    %span.town= @accommodation.guest.town
+    %span.country= @accommodation.guest.country.name
+    %span.date_of_birth= @accommodation.guest.date_of_birth
+  #col-12
+    %span.document_type= @accommodation.document_type.name
+    %span.document_number= @accommodation.document_number
+  #col-13
+    %span.residence_owner_name= @accommodation.residence.owner_name
+    %span.residence_address= @accommodation.residence.address
+    %span.residence_town= @accommodation.residence.town
+  #col-14= accommodation_entry_date= @accommodation.entry_date
+  #col-15= @accommodation.checkout_date

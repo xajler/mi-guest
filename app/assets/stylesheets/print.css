@@ -1,17 +1,30 @@
-@media print {
-body { padding-top: 0 !important; background-color: #fff !important;  }
-.navbar, .navbar-fixed-top { display: none !important; }
-}
-#col-1 { margin-top: 65pt; }
-#col-2, #col-3, #col-4, #col-5, #col-7, #col-9, #col-10, #col-11, #col-12,
-#col-13, #col-14, #col-15 {  }
+#buttons { font-weight: bold; }
+#print { color: #fff; }
+#col-1 { margin-top: 90pt; }
 #col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-9, #col-10,
-#col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 250pt; line-height: 21pt; border: 1px solid #f00; }
+#col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 272pt; line-height: 21pt; /* border: 1px solid #f00; */ }
 #col-6 { margin-top: 62pt; }
-#col-8 { margin-left: 20pt; margin-right: 20pt; overflow: hidden; width: 85%; }
-#col-8 .accommodation_entry_date { float: left; }
-#col-8 .accommodation_checkout_date { float: right; }
-.clear { clear: both  }
+#col-8 { margin-left: 80pt; overflow: hidden; width: 70%; }
+#col-8 .accommodation_entry_date { float: left; margin-top: 33pt; }
+#col-8 .accommodation_checkout_date { float: right; margin-top: 33pt;  }
+.clear { clear: both }
+#col-9 { margin-top: 185pt; }
+
+@media print {
+  body { padding-top: 0 !important; background-color: #fff !important; font-size: 8pt; font-family: 'arial narrow', helvetica, sans-serif; }
+  .navbar, .navbar-fixed-top { display: none !important; }
+
+  #buttons { display: none !important; }
+  #print { color: #000 !important;
+}
+
+@page { margin: 0; }
+/*
+#col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-8, #col-9, #col-10, 
+#col-11, #col-12, #col-13, #col-14, #col-15 { display: none; }
+
 
 #col-1, #col-2, #col-3, #col-4, #col-6, #col-9, #col-10, #col-11, #col-12,
 #col-13, #col-14 { border-bottom: 0; }
+*/
+

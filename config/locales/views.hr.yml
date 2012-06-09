@@ -75,3 +75,5 @@ hr:
       title: "Stvori smještaj"
     show:
       edit: "Izmjeni"
+    print:
+      print_accommodation: "Isprintaj smještaj"
