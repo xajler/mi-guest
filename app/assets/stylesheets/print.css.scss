@@ -3,7 +3,7 @@
 #col-1 { margin-top: 90pt; }
 #col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-9, #col-10,
 #col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 265pt; line-height: 21pt; }
-#col-6 { margin-top: 62pt; }
+#col-6 { margin-top: 58pt; }
 #col-8 { margin-left: 70pt; overflow: hidden; width: 73%; }
 #col-8 .accommodation_entry_date { float: left; margin-top: 33pt; }
 #col-8 .accommodation_checkout_date { float: right; margin-top: 33pt; }
@@ -11,7 +11,7 @@
 #col-9 { margin-top: 185pt; }
 
 @media print {
-  body { padding-top: 0 !important; background-color: #fff !important; font-size: 8pt; font-family: 'arial narrow', helvetica, sans-serif; }
+  body { padding-top: 0 !important; background-color: #fff !important; font-size: 9pt; font-family: 'arial narrow', helvetica, sans-serif; }
   .navbar, .navbar-fixed-top { display: none !important; }
 
   #buttons { display: none !important; }
@@ -19,5 +19,3 @@
 }
 
 @page { margin: 0; }
-
-
