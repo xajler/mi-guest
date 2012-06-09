@@ -23,7 +23,8 @@ class AccommodationsController < ApplicationController
     @accommodation = Accommodation.new(params[:accommodation])
 
     if @accommodation.save
-      redirect_to @accommodation, notice: t(:accommodations_create_notice)
+      flash[:notice] = t(:accommodations_create_notice)
+      redirect_to :action => "index"
     else
       render action: "new"
     end
@@ -33,7 +34,8 @@ class AccommodationsController < ApplicationController
     @accommodation = Accommodation.find(params[:id])
 
     if @accommodation.update_attributes(params[:accommodation])
-      redirect_to @accommodation, notice: t(:accommodations_update_notice)
+      flash[:notice] = t(:accommodations_update_notice)
+      redirect_to :action => "index"
     else
       render action: "edit"
     end

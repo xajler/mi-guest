@@ -4,10 +4,6 @@ class CountriesController < ApplicationController
     @countries = Country.all
   end
 
-  def show
-    @country = Country.find(params[:id])
-  end
-
   def new
     @country = Country.new
   end
@@ -20,7 +16,8 @@ class CountriesController < ApplicationController
     @country = Country.new(params[:country])
 
     if @country.save
-      redirect_to @country, notice: t(:countries_create_notice)
+      flash[:notice] = t(:countries_create_notice)
+      redirect_to :action => "index"
     else
       render action: "new"
     end
@@ -30,7 +27,8 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
 
     if @country.update_attributes(params[:country])
-      redirect_to @country, notice: t(:countries_update_notice)
+      flash[:notice] = t(:countries_update_notice)
+      redirect_to :action => "index"
     else
       render action: "edit"
     end

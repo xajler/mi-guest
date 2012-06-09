@@ -4,10 +4,6 @@ class ResidencesController < ApplicationController
     @residences = Residence.all
   end
 
-  def show
-    @residence = Residence.find(params[:id])
-  end
-
   def new
     @residence = Residence.new
   end
@@ -20,7 +16,8 @@ class ResidencesController < ApplicationController
     @residence = Residence.new(params[:residence])
 
     if @residence.save
-      redirect_to @residence, notice: t(:residences_create_notice)
+      flash[:notice] = t(:residences_create_notice)
+      redirect_to :action => "index"
     else
       render action: "new"
     end
@@ -30,7 +27,8 @@ class ResidencesController < ApplicationController
     @residence = Residence.find(params[:id])
 
     if @residence.update_attributes(params[:residence])
-      redirect_to @residence, notice: t(:residences_update_notice)
+      flash[:notice] = t(:residences_update_notice)
+      redirect_to :action => "index"
     else
       render action: "edit"
     end
