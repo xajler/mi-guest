@@ -2,11 +2,11 @@
 #print { color: #fff; }
 #col-1 { margin-top: 90pt; }
 #col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-9, #col-10,
-#col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 272pt; line-height: 21pt; /* border: 1px solid #f00; */ }
+#col-11, #col-12, #col-13, #col-14, #col-15 { margin-left: 272pt; line-height: 21pt; }
 #col-6 { margin-top: 62pt; }
 #col-8 { margin-left: 80pt; overflow: hidden; width: 70%; }
 #col-8 .accommodation_entry_date { float: left; margin-top: 33pt; }
-#col-8 .accommodation_checkout_date { float: right; margin-top: 33pt;  }
+#col-8 .accommodation_checkout_date { float: right; margin-top: 33pt; }
 .clear { clear: both }
 #col-9 { margin-top: 185pt; }
 
@@ -15,16 +15,9 @@
   .navbar, .navbar-fixed-top { display: none !important; }
 
   #buttons { display: none !important; }
-  #print { color: #000 !important;
+  #print { color: #000 !important; }
 }
 
 @page { margin: 0; }
-/*
-#col-1, #col-2, #col-3, #col-4, #col-5, #col-6, #col-7, #col-8, #col-9, #col-10, 
-#col-11, #col-12, #col-13, #col-14, #col-15 { display: none; }
 
-
-#col-1, #col-2, #col-3, #col-4, #col-6, #col-9, #col-10, #col-11, #col-12,
-#col-13, #col-14 { border-bottom: 0; }
-*/
 
