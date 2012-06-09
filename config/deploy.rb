@@ -2,15 +2,14 @@ require "bundler/capistrano"
 
 server "198.144.178.15", :web, :app, :db, primary: true
 
-set :application, "logviewer"
+set :application, "mi-guest"
 set :user, "xajler"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-# set :repository, "git@bitbucket.org:xajler/#{application}.git"
-set :repository, "git@github.com:xajler/mi-guest.git"
+set :repository, "git@github.com:xajler/#{application}.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
