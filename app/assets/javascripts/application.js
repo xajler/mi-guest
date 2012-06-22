@@ -15,4 +15,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require autocomplete-rails
+//= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap
 //= require_tree .

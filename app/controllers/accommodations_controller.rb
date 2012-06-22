@@ -1,10 +1,10 @@
 class AccommodationsController < ApplicationController
 
-  autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
+   autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
 
-  def index
+   def index
     @accommodations = Accommodation.by_created_at_desc
-  end
+   end
 
   def print
     @accommodation = Accommodation.find(params[:accommodation_id])
