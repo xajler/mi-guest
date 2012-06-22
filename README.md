@@ -1,5 +1,7 @@
 # Metaintellect Guest Application
 
+![](https://github.com/xajler/mi-guest/blob/master/doc/miguest.png)
+
 ## TODO:
 * Accommodation filtering by Year and Month.
 * Use image of "Form 8" and adding information on it for print.
