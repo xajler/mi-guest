@@ -16,7 +16,7 @@ body
 
 #login
 {
-    background: transparent url(/images/login-bg.png) repeat-x;
+    background: transparent url(login-bg.png) repeat-x;
     height: 250px;
     width:100%;
     margin-top: -125px;
@@ -34,7 +34,7 @@ body
 
 #login .logo
 {
-    background: transparent url(/images/miguest-sprite.png) 0 -85px no-repeat;
+    background: transparent url(miguest-sprite.png) 0 -85px no-repeat;
     height: 71px;
     width:248px;
     float:left;
@@ -64,7 +64,7 @@ body
 
 #login .input-login
 {
-    background: transparent url(/images/miguest-sprite.png) 0 0 no-repeat;
+    background: transparent url(miguest-sprite.png) 0 0 no-repeat;
     cursor: pointer;
     width: 59px;
     height: 32px;
