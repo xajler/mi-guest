@@ -11,7 +11,8 @@
   = f.input :date_of_birth, :as => :date,
                             :start_year => Date.today.year - 90,
                             :end_year => Date.today.year,
-                            :order => [:day, :month, :year]
+                            :order => [:day, :month, :year],
+                            :add_month_numbers => true
 
   = f.input :nationality_name, :url => autocomplete_nationality_name_guests_path,
                                :as => :autocomplete,
