@@ -4,7 +4,7 @@
   %h1=t '.title', :default => model_class.model_name.human.pluralize
 
 .filter
-  %form{ :action => "#{accommodations_path}"  }
+  %form{ :action => "#{accommodations_path}" }
     = select_month(@month, :add_month_numbers => true, :prefix => '')
     = select_year(@year, { :start_year => 2011, :end_year => Date.today.year, :prefix => '' }, { :class => 'small_select' })
     %input.btn-primary{ :value => t('helpers.links.filter'), :type => 'submit' }
