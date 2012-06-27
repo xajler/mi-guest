@@ -1,10 +1,18 @@
 class AccommodationsController < ApplicationController
 
-   autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
+  autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
 
-   def index
-    @accommodations = Accommodation.by_created_at_desc
-   end
+  def index
+    if params[:month].blank? or params[:year].blank?
+      @month = Date.today.month
+      @year = Date.today.year
+    else
+      @month = params[:month].to_i
+      @year = params[:year].to_i
+    end
+
+    @accommodations = Accommodation.filter_by_month_and_orderd_by_created_at_desc(@month, @year)
+  end
 
   def print
     @accommodation = Accommodation.find(params[:accommodation_id])

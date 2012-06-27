@@ -8,11 +8,10 @@ class Accommodation < ActiveRecord::Base
 
   validates_presence_of :document_number, :guest_id
 
-  def self.by_created_at_desc
-    Accommodation.order("created_at desc")
-  end
+  def self.filter_by_month_and_orderd_by_created_at_desc(month, year)
+    start_date = DateTime.new(year, month, 1)
+    end_date = start_date.end_of_month
 
-  #def guests_as_json
-  #  guests =
-  #end
+    Accommodation.where(:entry_date => start_date..end_date).order("created_at desc")
+  end
 end

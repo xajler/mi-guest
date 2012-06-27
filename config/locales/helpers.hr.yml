@@ -8,4 +8,5 @@ hr:
       confirm: "Da li ste sigurni?"
       back: "Nazad"
       print: "Isprintaj"
+      filter: "Filtriraj"
     actions: "Akcije"

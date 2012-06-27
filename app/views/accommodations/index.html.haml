@@ -4,8 +4,11 @@
   %h1=t '.title', :default => model_class.model_name.human.pluralize
 
 .filtering
-  = select_month(Date.today, :add_month_numbers => true)
-  = select_year(Date.today.year, { :start_year => 2011, :end_year => Date.today.year }, { :class => 'small_select' })
+  %form{ :action => "#{accommodations_path}"  }
+    = select_month(@month, :add_month_numbers => true, :prefix => '')
+    = select_year(@year, { :start_year => 2011, :end_year => Date.today.year, :prefix => '' }, { :class => 'small_select' })
+    = submit_tag t('helpers.links.filter'), :class => 'btn-primary' 
+
 
 = link_to t('.new', :default => t("helpers.links.new")),
           new_accommodation_path,
@@ -35,7 +38,7 @@
         %td
           = link_to t('helpers.links.print'),
                     accommodation_print_path(accommodation),
-                    :class => 'btn btn-mini btn-primary'
+                    :class => 'btn btn-mini btn-warning'
           = link_to t('.edit', :default => t("helpers.links.edit")),
                     edit_accommodation_path(accommodation),
                     :class => 'btn btn-mini btn-info'
