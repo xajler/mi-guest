@@ -11,7 +11,7 @@
 ## DONE:
 * Accommodation filtering by Year and Month.
 * Autocomplete in guest for country and nationality.
-* Autocomplete in accommodation for guest with value as [<last name> <first name> - <date if birth>].
+* Autocomplete in accommodation for guest with value as ["last name" "first name" - "date if birth"].
 * Localization to Croatian as default.
 
 ## Models
