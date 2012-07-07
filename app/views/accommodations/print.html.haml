@@ -4,6 +4,7 @@
             accommodations_path, :class => 'btn'
 
 #print
+  %img{ :src => "/assets/prijava-odjava.jpg", :border => "0", :alt => "Prijava", :style => "width: 705pt; height: 737pt; " }
   #col-1= @accommodation.guest.last_name
   #col-2= @accommodation.guest.first_name
   #col-3
@@ -24,8 +25,8 @@
     %span.guest_croatian_town= @accommodation.guest.croatian_town
     %span &nbsp;
   #col-8
-    .accommodation_entry_date= @accommodation.entry_date
-    .accommodation_checkout_date= @accommodation.checkout_date
+    %span.accommodation_entry_date= @accommodation.entry_date
+    %span.accommodation_checkout_date= @accommodation.checkout_date
 
   .clear
 
