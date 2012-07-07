@@ -3,16 +3,16 @@
 ![](https://github.com/xajler/mi-guest/raw/master/doc/miguest.png)
 
 ## TODO:
-* Use image of "Form 8a" and adding information on it for print.
 * Guest alphabetical pagination by Last Name.
 * Create links to switch languages currently available Croatian and English.
-* Create models for storing accommodations bills and printing them .
+* Create models for storing accommodations bills and printing them.
 
 ## Done:
+* Use image of "Form 8a" and adding information on it for print.
 * Accommodation filtering by Year and Month.
 * Print the accommodation details on Croatian government form called "Form 8a".
-* Autocomplete in guest for country and nationality.
-* Autocomplete in accommodation for guest with value as ["last name" "first name" - "date of birth"].
+* Auto-complete in guest for country and nationality.
+* Auto-complete in accommodation for guest with value as ["last name" "first name" - "date of birth"].
 * Localization to Croatian as default.
 
 ## Models
@@ -22,7 +22,6 @@
 * Country
 * Document Type
 * Residence
-* User
 
 ## Based on:
 * Ruby 1.9.3
