@@ -29,9 +29,9 @@
     - @accommodations.each do |accommodation|
       %tr
         %td
-          if accommodation.guest 
+          - if accommodation.guest 
             = link_to accommodation.guest.full_name, edit_accommodation_path(accommodation)
-          else
+          - else
             = "missing guest?!!"  
         %td= accommodation.document_type.name
         %td= accommodation.document_number
