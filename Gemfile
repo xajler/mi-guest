@@ -28,6 +28,7 @@ gem 'rails3-jquery-autocomplete', :git => 'git://github.com/crowdint/rails3-jque
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'haml'
+gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
