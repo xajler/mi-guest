@@ -16,8 +16,6 @@
       %th= model_class.human_attribute_name(:date_of_birth)
       %th= model_class.human_attribute_name(:nationality_name)
       %th= model_class.human_attribute_name(:created_at)
-      %th= model_class.human_attribute_name(:croatian_address)
-      %th= model_class.human_attribute_name(:croatian_town)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @guests.each do |guest|
@@ -27,9 +25,7 @@
         %td= guest.country.name
         %td= guest.date_of_birth
         %td= guest.nationality.name
-        %td= guest.created_at.to_s
-        %td= guest.croatian_address
-        %td= guest.croatian_town
+        %td= guest.created_at.to_sn
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
                     edit_guest_path(guest),
