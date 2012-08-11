@@ -17,3 +17,4 @@ rerun.txt
 pickle-email-*.html
 database.example.yml
 database.yml
+newrelic.yml

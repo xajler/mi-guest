@@ -25,7 +25,7 @@
         %td= guest.country.name
         %td= guest.date_of_birth
         %td= guest.nationality.name
-        %td= guest.created_at.to_sn
+        %td= guest.created_at.to_s
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
                     edit_guest_path(guest),
