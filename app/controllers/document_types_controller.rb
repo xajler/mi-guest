@@ -17,7 +17,7 @@ class DocumentTypesController < ApplicationController
 
     if @document_type.save
       flash[:notice] = t(:document_types_create_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "new"
     end
@@ -28,7 +28,7 @@ class DocumentTypesController < ApplicationController
 
     if @document_type.update_attributes(params[:document_type])
       flash[:notice] = t(:document_types_update_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "edit"
     end

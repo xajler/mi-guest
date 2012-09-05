@@ -4,7 +4,7 @@ MiGuest::Application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :accommodations do
-    get :autocomplete_guest_last_name, :on => :collection
+    get :autocomplete_guest_last_name, on: :collection
     get 'print'
   end
 
@@ -15,7 +15,7 @@ MiGuest::Application.routes.draw do
     end
   end
 
-  root :to => 'sessions#new'
+  root to: 'sessions#new'
 
   # Uncomment to create users via /users/new
   resources :users

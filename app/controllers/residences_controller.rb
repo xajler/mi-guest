@@ -17,7 +17,7 @@ class ResidencesController < ApplicationController
 
     if @residence.save
       flash[:notice] = t(:residences_create_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "new"
     end
@@ -28,7 +28,7 @@ class ResidencesController < ApplicationController
 
     if @residence.update_attributes(params[:residence])
       flash[:notice] = t(:residences_update_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "edit"
     end

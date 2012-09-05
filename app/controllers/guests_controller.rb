@@ -1,7 +1,7 @@
 class GuestsController < ApplicationController
 
-  autocomplete :country, :name, :full => true
-  autocomplete :nationality, :name, :full => true
+  autocomplete :country, :name, full: true
+  autocomplete :nationality, :name, full: true
 
   def index
     @guests = Guest.all
@@ -22,7 +22,7 @@ class GuestsController < ApplicationController
 
     if @guest.save
       flash[:notice] = t(:guests_create_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "new"
     end
@@ -33,7 +33,7 @@ class GuestsController < ApplicationController
 
     if @guest.update_attributes(params[:guest])
       flash[:notice] = t(:guests_update_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "edit"
     end

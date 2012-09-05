@@ -12,6 +12,6 @@ class Accommodation < ActiveRecord::Base
     start_date = DateTime.new(year, month, 1)
     end_date = start_date.end_of_month
 
-    Accommodation.where(:entry_date => start_date..end_date).order("created_at desc")
+    Accommodation.where(entry_date: start_date..end_date).order("created_at desc")
   end
 end

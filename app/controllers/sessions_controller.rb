@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   skip_before_filter :authorize
 
   def new
-    render :layout => false
+    render layout: false
   end
 
   def create
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       redirect_to accommodations_path
     else
       flash.now.alert = "Email or password is invalid"
-      render "new", :layout => false
+      render "new", layout: false
     end
   end
 

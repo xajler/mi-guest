@@ -17,7 +17,7 @@ class NationalitiesController < ApplicationController
 
     if @nationality.save
       flash[:notice] = t(:nationalities_create_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "new"
     end
@@ -28,7 +28,7 @@ class NationalitiesController < ApplicationController
 
     if @nationality.update_attributes(params[:nationality])
       flash[:notice] = t(:nationalities_update_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "edit"
     end

@@ -1,6 +1,6 @@
 class AccommodationsController < ApplicationController
 
-  autocomplete :guest, :last_name, :full => true, :extra_data => [:first_name, :date_of_birth], :display_value => :to_autocomplete
+  autocomplete :guest, :last_name, full: true, extra_data: [:first_name, :date_of_birth], display_value: :to_autocomplete
 
   def index
     if params[:month].blank? or params[:year].blank?
@@ -32,7 +32,7 @@ class AccommodationsController < ApplicationController
 
     if @accommodation.save
       flash[:notice] = t(:accommodations_create_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "new"
     end
@@ -43,7 +43,7 @@ class AccommodationsController < ApplicationController
 
     if @accommodation.update_attributes(params[:accommodation])
       flash[:notice] = t(:accommodations_update_notice)
-      redirect_to :action => "index"
+      redirect_to action: "index"
     else
       render action: "edit"
     end
