@@ -2,10 +2,13 @@
 %html
 %head
   %title MiGuest::Villa Marta::Login
-  -# %link{"rel" => "stylesheet", "href" => "/stylesheets/sessions.css", "type" => "text/css", "media" => "all"}
   = stylesheet_link_tag "login", :media => "all"
   = csrf_meta_tags  
   %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  %script{:type => "text/javascript"}
+    :plain
+      window.onload = function () { document.forms[0].username.focus(); }
+
 %body
   #login
     .wrapper
@@ -17,7 +20,6 @@
           %p          
             = password_field_tag :password, nil, :class => 'input-password', :placeholder => t('.password')
           %p          
-            -# = submit_tag t('.login'), :class => 'input-login'
             = submit_tag '', :class => 'input-login'
       %br.clear-fix      
       .copyright

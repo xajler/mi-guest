@@ -3,11 +3,12 @@
 ![](https://github.com/xajler/mi-guest/raw/master/doc/miguest.png)
 
 ## TODO:
-* Add to Accomodation form: 
+* Add to Accommodation form: 
   * Number of Nights.
   * Price (infered from apartment type period price, can be overriden).
-  * Rabat (Guest can have rabat and it will populate if it has one).
-  * Total price
+  * Rebate (Guest can have rebate and it will populate if it has one).
+  * Total price.
+  * The print of accommodation invoice.
 * Add to Guest Rabat value that can be entered.
 * Guest alphabetical pagination by Last Name.
 * Create links to switch languages currently available Croatian and English.
