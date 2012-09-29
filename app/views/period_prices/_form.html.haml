@@ -8,13 +8,13 @@
   = f.input :from, :as => :date,
                             :start_year => Date.today.year,
                             :end_year => Date.today.year,
-                            :order => [:day, :month],
+                            :order => [:day, :month, :year],
                             :add_month_numbers => true
 
   = f.input :to, :as => :date,
                             :start_year => Date.today.year,
                             :end_year => Date.today.year,
-                            :order => [:day, :month],
+                            :order => [:day, :month, :year],
                             :add_month_numbers => true
 
   = f.input :price_euro
