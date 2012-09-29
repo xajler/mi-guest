@@ -7,6 +7,10 @@ hr:
       countries: "Države"
       residences: "Prebivališta"
       document_types: "Tipovi dokumenata"
+      apartment_types: "Tipovi apartmana"
+      apartments: "Apartmani"
+      period_prices: "Cijena za period"
+      settings: "Postavke"
     logout: "Odjava"
 
   sessions:
@@ -77,3 +81,33 @@ hr:
       edit: "Izmjeni"
     print:
       print_accommodation: "Isprintaj smještaj"
+
+  apartment_types:
+    index:
+      title: "Tipovi apartmana"
+    edit:
+      title: "Izmjeni tip apartmana"
+    new:
+      title: "Stvori tip apartmana"
+    show:
+      edit: "Izmjeni" 
+
+  apartments:
+    index:
+      title: "Apartmani"
+    edit:
+      title: "Izmjeni apartman"
+    new:
+      title: "Stvori apartman"
+    show:
+      edit: "Izmjeni"             
+
+  period_prices:
+    index:
+      title: "Cijene za period"
+    edit:
+      title: "Izmjeni cijenu za period"
+    new:
+      title: "Stvori cijenu za period"
+    show:
+      edit: "Izmjeni" 

@@ -3,6 +3,12 @@
 ![](https://github.com/xajler/mi-guest/raw/master/doc/miguest.png)
 
 ## TODO:
+* Add to Accomodation form: 
+  * Number of Nights.
+  * Price (infered from apartment type period price, can be overriden).
+  * Rabat (Guest can have rabat and it will populate if it has one).
+  * Total price
+* Add to Guest Rabat value that can be entered.
 * Guest alphabetical pagination by Last Name.
 * Create links to switch languages currently available Croatian and English.
 * Create models for storing accommodations bills and printing them.
@@ -22,10 +28,13 @@
 * Country
 * Document Type
 * Residence
+* Apartment
+* Apartment Type
+* Period Price (for Apartment Type)
 
 ## Based on:
 * Ruby 1.9.3
-* Rails 3.2.6
+* Rails 3.2.8
 * PostgreSQL (production)
 * SQLite (development)
 * Haml

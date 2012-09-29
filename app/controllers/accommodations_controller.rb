@@ -28,6 +28,7 @@ class AccommodationsController < ApplicationController
   end
 
   def create
+    p params[:accomodation]
     @accommodation = Accommodation.new(params[:accommodation])
 
     if @accommodation.save

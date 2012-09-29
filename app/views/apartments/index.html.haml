@@ -1,26 +1,29 @@
-- model_class = DocumentType.new.class
+- model_class = Apartment.new.class
 
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.pluralize
 
 = link_to t('.new', :default => t("helpers.links.new")),
-          new_document_type_path,
+          new_apartment_path,
           :class => 'btn btn-primary'
 
-%table{ :class => "table table-striped" }
+%table#apartments(class="table table-striped display")
   %thead
     %tr
-      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:number)
+      %th= model_class.human_attribute_name(:apartment_type_name)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
-    - @document_types.each do |document_type|
+    - @apartments.each do |apartment|
       %tr
-        %td= link_to document_type.name, edit_document_type_path(document_type)
+        %td= link_to apartment.number, edit_apartment_path(apartment)
+        %td= apartment.apartment_type.name
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")),
-                    edit_document_type_path(document_type), :class => 'btn btn-mini btn-info'
+                    edit_apartment_path(apartment),
+                    :class => 'btn btn-mini btn-info'
           = link_to t('.destroy', :default => t("helpers.links.destroy")),
-                    document_type_path(document_type),
+                    apartment_path(apartment),
                     :method => :delete,
                     :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
                     :class => 'btn btn-mini btn-danger'

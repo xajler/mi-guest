@@ -1,5 +1,7 @@
 MiGuest::Application.routes.draw do
 
+  resources :apartment_types
+
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
@@ -17,7 +19,6 @@ MiGuest::Application.routes.draw do
 
   root to: 'sessions#new'
 
-  # Uncomment to create users via /users/new
   resources :users
 
   resources :sessions
@@ -36,6 +37,13 @@ MiGuest::Application.routes.draw do
 
   resources :countries
 
+  resources :apartment_types
+
+  resources :period_prices, :apartments do
+    collection do
+      get :autocomplete_apartment_type_name
+    end
+  end  
 
 
   # The priority is based upon order of creation:

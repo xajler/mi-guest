@@ -25,6 +25,18 @@ hr:
         one: "Smještaj"
         other: "Smještaji"
 
+      apartment_type:
+        one: "Tip apartmana"
+        other: "Tipovi apartmana"    
+
+      period_price:
+        one: "Cijena za period"
+        other: "Cijene za period"  
+
+      apartment:
+        one: "Apartman"
+        other: "Apartmani"                     
+
     attributes:
       country:
         name: "Naziv"
@@ -34,6 +46,20 @@ hr:
 
       document_type:
         name: "Naziv"
+
+      apartment_type:
+        name: "Naziv"
+
+      apartment:
+        number: "Broj"   
+        apartment_type_name: "Tip apartmana"     
+
+      period_price:
+        apartment_type_name: "Tip apartmana" 
+        from: "Od"
+        to: "Do"
+        price_euro: "Cijena u eurima"
+        price: "Cijena"      
 
       residence:
         owner_name: "Ime vlasnika"

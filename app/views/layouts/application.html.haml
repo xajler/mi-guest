@@ -29,26 +29,23 @@
               %li.active= link_to t('application.menu.guests'), guests_path
             - else
               %li= link_to t('application.menu.guests'), guests_path
-
-            - if params[:controller] == 'nationalities'
-              %li.active= link_to t('application.menu.nationalities'), nationalities_path
+            - if params[:controller] == 'apartments'
+              %li.active= link_to t('application.menu.apartments'), apartments_path
             - else
-              %li= link_to t('application.menu.nationalities'), nationalities_path
+              %li= link_to t('application.menu.apartments'), apartments_path              
 
-            - if params[:controller] == 'countries'
-              %li.active= link_to t('application.menu.countries'), countries_path
-            - else
-              %li= link_to t('application.menu.countries'), countries_path
-
-            - if params[:controller] == 'residences'
-              %li.active= link_to t('application.menu.residences'), residences_path
-            - else
-              %li= link_to t('application.menu.residences'), residences_path
-
-            - if params[:controller] == 'document_types'
-              %li.active= link_to t('application.menu.document_types'), document_types_path
-            - else
-              %li= link_to t('application.menu.document_types'), document_types_path
+            %li.dropdown
+              %a.dropdown-toggle(id="drop1" role="button" data-toggle="dropdown" data-target="#" href="#")
+                = t('application.menu.settings')
+                %b.caret
+              %ul.dropdown-menu(id="menu1" role="menu" aria-labelledby="drop1")
+                %li= link_to t('application.menu.nationalities'), nationalities_path
+                %li= link_to t('application.menu.countries'), countries_path
+                %li= link_to t('application.menu.residences'), residences_path
+                %li= link_to t('application.menu.document_types'), document_types_path
+                %li= link_to t('application.menu.period_prices'), period_prices_path 
+                %li= link_to t('application.menu.apartment_types'), apartment_types_path            
+                          
           %ul{ :class => "nav pull-right" }
             - if current_user
               %li= link_to  current_user.username, "#"

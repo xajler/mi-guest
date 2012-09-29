@@ -1,0 +1,11 @@
+= simple_form_for @apartment, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :number
+  = f.input :apartment_type_name, :url => autocomplete_apartment_type_name_apartments_path,
+                           :as => :autocomplete,
+                           :input_html => { :id_element => "#apartment_apartment_type_id",
+                                            :value => @apartment_type_name }
+  = f.input :apartment_type_id, :as => :hidden
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")),
+              apartments_path, :class => 'btn'
