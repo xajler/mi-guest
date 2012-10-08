@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120929025736) do
+ActiveRecord::Schema.define(:version => 20121004230406) do
 
   create_table "accommodations", :force => true do |t|
     t.integer  "guest_id"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20120929025736) do
     t.string   "croatian_town"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "rebate"
   end
 
   add_index "guests", ["country_id"], :name => "index_guests_on_country_id"

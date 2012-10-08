@@ -2,7 +2,8 @@
   = f.input :last_name
   = f.input :first_name
   = f.input :town
-  = f.input :country_name, :url => autocomplete_country_name_guests_path,
+  = f.input :rebate
+  = f.input :counTRy_name, :url => autocomplete_country_name_guests_path,
                            :as => :autocomplete,
                            :input_html => { :id_element => "#guest_country_id",
                                             :value => @country_name }

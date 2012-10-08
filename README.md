@@ -3,10 +3,9 @@
 ![](https://github.com/xajler/mi-guest/raw/master/doc/miguest.png)
 
 ## TODO:
-* Add to Accommodation form: 
+* Add to Accommodation form:
   * Number of Nights.
   * Price (infered from apartment type period price, can be overriden).
-  * Rebate (Guest can have rebate and it will populate if it has one).
   * Total price.
   * The print of accommodation invoice.
 * Add to Guest Rabat value that can be entered.
@@ -15,6 +14,7 @@
 * Create models for storing accommodations bills and printing them.
 
 ## Done:
+* Rebate (Guest can have rebate and it will populate if it has one).
 * Use image of "Form 8a" and adding information on it for print.
 * Accommodation filtering by Year and Month.
 * Print the accommodation details on Croatian government form called "Form 8a".

@@ -27,15 +27,15 @@ hr:
 
       apartment_type:
         one: "Tip apartmana"
-        other: "Tipovi apartmana"    
+        other: "Tipovi apartmana"
 
       period_price:
         one: "Cijena za period"
-        other: "Cijene za period"  
+        other: "Cijene za period"
 
       apartment:
         one: "Apartman"
-        other: "Apartmani"                     
+        other: "Apartmani"
 
     attributes:
       country:
@@ -51,15 +51,15 @@ hr:
         name: "Naziv"
 
       apartment:
-        number: "Broj"   
-        apartment_type_name: "Tip apartmana"     
+        number: "Broj"
+        apartment_type_name: "Tip apartmana"
 
       period_price:
-        apartment_type_name: "Tip apartmana" 
+        apartment_type_name: "Tip apartmana"
         from: "Od"
         to: "Do"
         price_euro: "Cijena u eurima"
-        price: "Cijena"      
+        price: "Cijena"
 
       residence:
         owner_name: "Ime vlasnika"
@@ -77,6 +77,7 @@ hr:
         croatian_town: "Grad boravišta u HR"
         created_at: "Datum stvaranja"
         full_name: "Prezime i ime"
+        rebate: "Rabat"
 
       accommodation:
         guest_last_name: "Prezime i ime"
@@ -85,4 +86,4 @@ hr:
         residence: "Prebivalište"
         entry_date: "Datum dolaska"
         checkout_date: "Datum odlaska"
-        created_at: "Datum stvaranja"       
+        created_at: "Datum stvaranja"
