@@ -4,7 +4,9 @@ class GuestsController < ApplicationController
   autocomplete :nationality, :name, full: true
 
   def index
-    @guests = Guest.all
+    @guests = Guest.includes(:nationality)
+                   .includes(:country)
+                   .all
   end
 
   def new

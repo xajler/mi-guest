@@ -1,11 +1,11 @@
 - model_class = PeriodPrice.new.class
 
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize
+  %h1=t '.title', default: model_class.model_name.human.pluralize
 
-= link_to t('.new', :default => t("helpers.links.new")),
+= link_to t('.new', default: t("helpers.links.new")),
           new_period_price_path,
-          :class => 'btn btn-primary'
+          class: 'btn btn-primary'
 
 %table#period_prices(class="table table-striped display")
   %thead
@@ -15,7 +15,7 @@
       %th= model_class.human_attribute_name(:to)
       %th= model_class.human_attribute_name(:price_euro)
       %th= model_class.human_attribute_name(:price)
-      %th=t '.actions', :default => t("helpers.actions")
+      %th=t '.actions', default: t("helpers.actions")
   %tbody
     - @period_prices.each do |period_price|
       %tr
@@ -25,11 +25,11 @@
         %td= period_price.price_euro
         %td= period_price.price
         %td
-          = link_to t('.edit', :default => t("helpers.links.edit")),
+          = link_to t('.edit', default: t("helpers.links.edit")),
                     edit_period_price_path(period_price),
-                    :class => 'btn btn-mini btn-info'
-          = link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    class: 'btn btn-mini btn-info'
+          = link_to t('.destroy', default: t("helpers.links.destroy")),
                     period_price_path(period_price),
-                    :method => :delete,
-                    :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-                    :class => 'btn btn-mini btn-danger'
+                    method: :delete,
+                    confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')),
+                    class: 'btn btn-mini btn-danger'

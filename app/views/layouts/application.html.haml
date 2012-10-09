@@ -5,7 +5,7 @@
   /[if lt IE 9]
     %script(src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript")
 
-  = stylesheet_link_tag    "application", :media => "all"
+  = stylesheet_link_tag    "application", media: "all"
   = javascript_include_tag "application"
   = csrf_meta_tags
   %meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -32,7 +32,7 @@
             - if params[:controller] == 'apartments'
               %li.active= link_to t('application.menu.apartments'), apartments_path
             - else
-              %li= link_to t('application.menu.apartments'), apartments_path              
+              %li= link_to t('application.menu.apartments'), apartments_path
 
             %li.dropdown
               %a.dropdown-toggle(id="drop1" role="button" data-toggle="dropdown" data-target="#" href="#")
@@ -43,9 +43,9 @@
                 %li= link_to t('application.menu.countries'), countries_path
                 %li= link_to t('application.menu.residences'), residences_path
                 %li= link_to t('application.menu.document_types'), document_types_path
-                %li= link_to t('application.menu.period_prices'), period_prices_path 
-                %li= link_to t('application.menu.apartment_types'), apartment_types_path            
-                          
+                %li= link_to t('application.menu.period_prices'), period_prices_path
+                %li= link_to t('application.menu.apartment_types'), apartment_types_path
+
           %ul{ :class => "nav pull-right" }
             - if current_user
               %li= link_to  current_user.username, "#"

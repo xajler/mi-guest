@@ -2,10 +2,10 @@
 %html
 %head
   %title MiGuest::Villa Marta::Login
-  = stylesheet_link_tag "login", :media => "all"
-  = csrf_meta_tags  
+  = stylesheet_link_tag "login", media: "all"
+  = csrf_meta_tags
   %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  %script{:type => "text/javascript"}
+  %script{ type: "text/javascript" }
     :plain
       window.onload = function () { document.forms[0].username.focus(); }
 
@@ -16,11 +16,11 @@
       .form
         = form_tag sessions_path do
           %p
-            = text_field_tag :username, params[:username], :class => 'input-text', :placeholder => t('.username')
-          %p          
-            = password_field_tag :password, nil, :class => 'input-password', :placeholder => t('.password')
-          %p          
-            = submit_tag '', :class => 'input-login'
-      %br.clear-fix      
+            = text_field_tag :username, params[:username], class: 'input-text', placeholder: t('.username')
+          %p
+            = password_field_tag :password, nil, class: 'input-password', placeholder: t('.password')
+          %p
+            = submit_tag '', class: 'input-login'
+      %br.clear-fix
       .copyright
         Copyright &copy; 2012 <a href="http://metaintellect.com" title="Metaintellect" target="_blank">Metaintellect</a> by Kornelije Sajler. All rights reserved.

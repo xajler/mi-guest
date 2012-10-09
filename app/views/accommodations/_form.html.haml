@@ -1,25 +1,25 @@
-= simple_form_for @accommodation, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :guest_last_name, :url => autocomplete_guest_last_name_accommodations_path,
-                              :as => :autocomplete,
-                              :input_html => { :id_element => "#accommodation_guest_id",
-                                               :value => @guest_name }
-  = f.input :guest_id, :as => :hidden
-  = f.association :document_type, :as => :radio_buttons,
-                                  :checked => 1
+= simple_form_for @accommodation, html: { class: 'form-horizontal' } do |f|
+  = f.input :guest_last_name, url: autocomplete_guest_last_name_accommodations_path,
+                              as: :autocomplete,
+                              input_html: { id_element: "#accommodation_guest_id",
+                                            value: @guest_name }
+  = f.input :guest_id, as: :hidden
+  = f.association :document_type, as: :radio_buttons,
+                                  checked: 1
   = f.input :document_number
-  = f.association :residence, :include_blank => false,
-                              :input_html => { :class => 'large_select' }
-  = f.input :entry_date, :as => :date,
-                         :start_year => 2011,
-                         :end_year => Date.today.year + 1,
-                         :order => [:day, :month, :year],
-                         :add_month_numbers => true
-  = f.input :checkout_date, :as => :date,
-                            :start_year => 2011,
-                            :end_year => Date.today.year + 1,
-                            :order => [:day, :month, :year],
-                            :add_month_numbers => true
+  = f.association :residence, include_blank: false,
+                              input_html: { class: 'large_select' }
+  = f.input :entry_date, as: :date,
+                         start_year: 2011,
+                         end_year: Date.today.year + 1,
+                         order: [:day, :month, :year],
+                         add_month_numbers: true
+  = f.input :checkout_date, as: :date,
+                            start_year: 2011,
+                            end_year: Date.today.year + 1,
+                            order: [:day, :month, :year],
+                            add_month_numbers: true
   .form-actions
-    = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")),
-              accommodations_path, :class => 'btn'
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel', default: t("helpers.links.cancel")),
+              accommodations_path, class: 'btn'

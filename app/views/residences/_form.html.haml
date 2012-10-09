@@ -1,8 +1,8 @@
-= simple_form_for @residence, :html => { :class => 'form-horizontal' } do |f|
+= simple_form_for @residence, html: { class: 'form-horizontal' } do |f|
   = f.input :owner_name
   = f.input :address
   = f.input :town
   .form-actions
-    = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")),
-              residences_path, :class => 'btn'
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel', default: t("helpers.links.cancel")),
+              residences_path, class: 'btn'

@@ -1,10 +1,10 @@
 #buttons
-  %button{ :class => 'btn btn-warning', :onclick => 'window.print();' }= t('.print_accommodation')
-  = link_to t('.cancel', :default => t("helpers.links.cancel")),
-            accommodations_path, :class => 'btn'
+  %button{ class: 'btn btn-warning', onclick: 'window.print();' }= t('.print_accommodation')
+  = link_to t('.cancel', default: t("helpers.links.cancel")),
+            accommodations_path, class: 'btn'
 
 #print
-  %img{ :src => "/assets/prijava-odjava.jpg", :border => "0", :alt => "Prijava", :style => "width: 705pt; height: 737pt; " }
+  %img{ src: "/assets/prijava-odjava.jpg", border: "0", alt: "Prijava", style: "width: 705pt; height: 737pt; " }
   #col-1= @accommodation.guest.last_name
   #col-2= @accommodation.guest.first_name
   #col-3

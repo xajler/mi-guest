@@ -4,7 +4,8 @@ class Accommodation < ActiveRecord::Base
   belongs_to :residence
 
   attr_accessor :guest_last_name
-  attr_accessible :checkout_date, :entry_date, :guest_id, :document_type_id, :residence_id, :document_number, :guest_last_name
+  attr_accessible :checkout_date, :entry_date, :guest_id, :document_type_id,
+                  :residence_id, :document_number, :guest_last_name
 
   validates_presence_of :document_number, :guest_id
 
@@ -12,6 +13,10 @@ class Accommodation < ActiveRecord::Base
     start_date = DateTime.new(year, month, 1)
     end_date = start_date.end_of_month
 
-    Accommodation.where(entry_date: start_date..end_date).order("created_at desc")
+    Accommodation.where(entry_date: start_date..end_date)
+                 .order("created_at desc")
+                 .includes(:guest)
+                 .includes(:document_type)
+                 .includes(:residence)
   end
 end

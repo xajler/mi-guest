@@ -1,6 +1,7 @@
 class AccommodationsController < ApplicationController
 
-  autocomplete :guest, :last_name, full: true, extra_data: [:first_name, :date_of_birth], display_value: :to_autocomplete
+  autocomplete :guest, :last_name, full: true, extra_data: [:first_name, :date_of_birth],
+                                   display_value: :to_autocomplete
 
   def index
     if params[:month].blank? or params[:year].blank?
