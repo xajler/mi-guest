@@ -1,4 +1,4 @@
-root = "/home/xajler/apps/villa_marta/current"
+root = "/home/xajler/apps/villa-marta/current"
 # root = "/home/xajler/apps/hostelri/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
