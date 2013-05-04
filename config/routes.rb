@@ -1,5 +1,6 @@
 MiGuest::Application.routes.draw do
 
+  resources :sessions
   resources :apartment_types
 
   get 'login', to: 'sessions#new', as: 'login'
@@ -20,8 +21,6 @@ MiGuest::Application.routes.draw do
   root to: 'sessions#new'
 
   resources :users
-
-  resources :sessions
 
   resources :accommodations
 

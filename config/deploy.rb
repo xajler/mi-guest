@@ -1,8 +1,9 @@
 require "bundler/capistrano"
 
-server "198.144.178.15", :web, :app, :db, primary: true
+server "76.72.175.181", :web, :app, :db, primary: true
 
-set :application, "mi-guest"
+set :application, "villa-marta"
+# set :application, "hostelri"
 set :user, "xajler"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
@@ -29,7 +30,8 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/database.villa_marta.yml"), "#{shared_path}/config/database.yml"
+    # put File.read("config/database.hostelri.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"

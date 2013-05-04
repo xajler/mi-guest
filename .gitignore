@@ -16,6 +16,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-database.example.yml
+database.villa_marta.yml
+database.hostelri.yml
 database.yml
 newrelic.yml
